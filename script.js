@@ -1,3 +1,19 @@
+const mostrarDDD = (dados) => {
+    document.getElementById('ddd').innerText = `DDD: ${dados.ddd}`;
+}
+
+const mostrarCidade = (dados) => {
+    document.getElementById('cidade').innerText = `Cidade: ${dados.localidade}`;
+}
+
+const mostrarEstado = (dados) => {
+    document.getElementById('estado').innerText = `Estado: ${dados.uf}`;
+}
+
+const mostrarRua = (dados) => {
+    document.getElementById('rua').innerText = `Rua: ${dados.logradouro}`;
+}
+
 const BuscarCEP = async () => {
     const cepInput = document.getElementById('cep');
     const cep = cepInput.value.replace(/\D/g, "");
@@ -19,11 +35,11 @@ const BuscarCEP = async () => {
             return
         }
 
-        document.getElementById('ddd').innerText = `DDD: ${dados.ddd}`;
-        document.getElementById('cidade').innerText = `Cidade: ${dados.localidade}`;
-        document.getElementById('estado').innerText = `Estado: ${dados.uf}`;
-        document.getElementById('rua').innerText = `Rua: ${dados.logradouro}`;
-        
+        mostrarDDD(dados);
+        mostrarCidade(dados);
+        mostrarEstado(dados);
+        mostrarRua(dados);
+
         cepInput.value = "";
 
     } catch (err) {
