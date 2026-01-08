@@ -12,10 +12,16 @@
 <body class="bg-black">
     <main class="flex justify-center min-h-screen mt-30 font-poppins font-bold">
         <div>
-            <h1 class="text-center text-3xl mb-10 text-white">Busca um endereço</h1>
-            <input class="text-white bg-gray-500/30 placeholder:text-white pl-5 rounded-xl h-10 outline-none" type="text" placeholder="Digite um CEP">
-            <button class="text-white bg-blue-500 ml-8 rounded-sm p-1 transition-opacity hover:opacity-50">Procurar</button>
-            <p></p>
+            <h1 class="text-center text-3xl mb-10 text-white">Buscar um endereço</h1>
+            <p id="verificar-cep" class="text-center text-red-500 relative -top-6"></p>
+            <input id="cep" class="text-white bg-gray-500/30 placeholder:text-white pl-5 rounded-xl h-10 outline-none" type="text" placeholder="Digite um CEP">
+            <button id="btn-procurar" class="text-white bg-blue-500 ml-8 rounded-sm p-1 transition-opacity hover:opacity-50">Procurar</button>
+            <div class="text-white text-left mt-10">
+                <p id="ddd"></p>
+                <p id="cidade"></p>
+                <p id="estado"></p>
+                <p id="rua"></p>
+            </div>
         </div>
     </main>
 
